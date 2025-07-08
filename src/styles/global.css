@@ -1,23 +1,21 @@
 :root {
-  --bg: #000000;
-  --text: #eeeeee;
-  --accent: #ffffff;
-  font-family: 'Helvetica Neue', Helvetica;
+  --bg: #0f0f0f;
+  --text: #ffffff;
+  --accent: #8affc1;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
+  padding: 3rem rem;
   background-color: var(--bg);
   color: var(--text);
-  font-size: 18px;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  line-height: 1.2;
 }
 
 section {
-  max-width: 900px;
+  max-width: 500spx; /* mais estreito */
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 3rem 1rem;
 }
