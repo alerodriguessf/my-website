@@ -2,7 +2,7 @@
   --bg: #0f0f0f;
   --text: #ffffff;
   --accent: #8affc1;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'SF Pro Display', sans-serif;
 }
 
 body {
@@ -15,7 +15,8 @@ body {
 }
 
 section {
-  max-width: 500spx; /* mais estreito */
+  max-width: 500spx;
+  /* mais estreito */
   margin: 0 auto;
   padding: 3rem 1rem;
 }
