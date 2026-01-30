@@ -47,7 +47,7 @@ const projects = [
 
 <section id="portfolio" style="max-width: 880px; margin: 3rem auto 2rem auto; padding: 0 1rem;">
   <p style="
-    font-size: 1.5rem;
+    font-size: 1.65rem;
     font-weight: regular;
     color: #ffffff;
     margin: 0 0 1rem 0;
@@ -72,7 +72,9 @@ const projects = [
           overflow: hidden;
           background: transparent;
           transition: transform 0.3s ease, box-shadow 0.3s ease;
-          box-shadow: 0 10px 25px rgba(0,0,0,0.65);
+          box-shadow: 
+            0 8px 32px rgba(0, 0, 0, 0.4),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
         ">
           <!-- Imagem de fundo -->
           <img src={project.image} alt={project.title} style="
@@ -80,12 +82,12 @@ const projects = [
             width: 100%;
             height: 100%;
             object-fit: cover;
-            filter: grayscale(10%) brightness(95%);
+            filter: grayscale(8%) brightness(92%);
             opacity: 1;
             z-index: 0;
           " />
 
-          <!-- Overlay com gradiente para legibilidade do texto -->
+          <!-- Overlay com gradiente elegante -->
           <div style="
             position: absolute;
             top: 0;
@@ -95,13 +97,14 @@ const projects = [
             background:
               linear-gradient(
                 to top,
-                rgba(249, 250, 251, 0.82) 0%,
-                rgba(249, 250, 251, 0.72) 35%,
-                rgba(249, 250, 251, 0.44) 65%,
-                rgba(249, 250, 251, 0.14) 100%
+                rgba(229, 231, 235, 0.88) 0%,
+                rgba(229, 231, 235, 0.75) 30%,
+                rgba(229, 231, 235, 0.52) 60%,
+                rgba(229, 231, 235, 0.18) 100%
               );
-            backdrop-filter: blur(1.3px);
-            border: 1px solid rgba(148, 163, 184, 0.32);
+            backdrop-filter: blur(2px);
+            -webkit-backdrop-filter: blur(2px);
+            border: 1px solid rgba(203, 213, 225, 0.4);
             z-index: 1;
           "></div>
 
@@ -116,17 +119,17 @@ const projects = [
           ">
             <h3 style="
               margin: 0 0 0.25rem 0;
-              font-size: 1.0rem;
-              font-weight: 700;
+              font-size: 1.05rem;
+              font-weight: 600;
               letter-spacing: 0.01em;
-              color: #111827;
+              color: #0f172a;
             ">
               {project.title}
             </h3>
             <p style="
               margin: 0;
-              font-size: 0.8rem;
-              color: #4b5563;
+              font-size: 0.95rem;
+              color: #334155;
               font-weight: 400;
             ">
               {project.subtitle}
@@ -140,7 +143,7 @@ const projects = [
 
 <style>
   .project-card:hover {
-    box-shadow: 0 4px 12px rgba(92, 92, 92, 0.6) !important;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5) !important;
     transform: translateY(-4px);
   }
 </style>
