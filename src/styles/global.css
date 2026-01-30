@@ -7,7 +7,7 @@
 
 body {
   margin: 0 auto;
-  padding: 3rem rem;
+  padding: 3rem 0;
   background-color: var(--bg);
   color: var(--text);
   font-size: 16px;
@@ -15,7 +15,7 @@ body {
 }
 
 section {
-  max-width: 500spx;
+  max-width: 500px;
   /* mais estreito */
   margin: 0 auto;
   padding: 3rem 1rem;

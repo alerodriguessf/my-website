@@ -70,9 +70,9 @@ const projects = [
           height: 160px;
           border-radius: 12px;
           overflow: hidden;
-          background: linear-gradient(145deg, #1a1a1a, #131313);
+          background: transparent;
           transition: transform 0.3s ease, box-shadow 0.3s ease;
-          box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+          box-shadow: 0 10px 25px rgba(0,0,0,0.65);
         ">
           <!-- Imagem de fundo -->
           <img src={project.image} alt={project.title} style="
@@ -80,19 +80,28 @@ const projects = [
             width: 100%;
             height: 100%;
             object-fit: cover;
-            filter: brightness(70%);
+            filter: grayscale(10%) brightness(95%);
+            opacity: 1;
             z-index: 0;
           " />
 
-          <!-- Overlay escurecido -->
+          <!-- Overlay com gradiente para legibilidade do texto -->
           <div style="
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(77, 77, 77, 0.35);
-            backdrop-filter: blur(1.5px);
+            background:
+              linear-gradient(
+                to top,
+                rgba(249, 250, 251, 0.82) 0%,
+                rgba(249, 250, 251, 0.72) 35%,
+                rgba(249, 250, 251, 0.44) 65%,
+                rgba(249, 250, 251, 0.14) 100%
+              );
+            backdrop-filter: blur(1.3px);
+            border: 1px solid rgba(148, 163, 184, 0.32);
             z-index: 1;
           "></div>
 
@@ -101,13 +110,25 @@ const projects = [
             position: absolute;
             bottom: 0.75rem;
             left: 0.75rem;
-            color: white;
+            right: 0.75rem;
+            color: #111827;
             z-index: 2;
           ">
-            <h3 style="margin: 0 0 0.2rem 0; font-size: 1.0rem; font-weight: bold;">
+            <h3 style="
+              margin: 0 0 0.25rem 0;
+              font-size: 1.0rem;
+              font-weight: 700;
+              letter-spacing: 0.01em;
+              color: #111827;
+            ">
               {project.title}
             </h3>
-            <p style="margin: 0; font-size: 0.8rem; color: #ccc;">
+            <p style="
+              margin: 0;
+              font-size: 0.8rem;
+              color: #4b5563;
+              font-weight: 400;
+            ">
               {project.subtitle}
             </p>
           </div>
