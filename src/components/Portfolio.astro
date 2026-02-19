@@ -1,30 +1,30 @@
 ---
 const projects = [
-       {
+  {
     title: "helping 75.000 family farmers prepare for climate change",
     subtitle: "(Powerbi, Statistical Analysis, Data Visualization)",
     image: "/images/andre-magalhaes-paCMZPVhUfc-unsplash.jpg",
     link: "https://github.com/alerodriguessf/sertaovivo_dashboard_climatechange"
   },
-       {
+  {
     title: "building a elt pipeline using the adventure works dataset",
-    subtitle: "(Meltano, Databricks, dbt, Docker)",         
+    subtitle: "(Meltano, Databricks, dbt, Docker)",
     image: "/images/the-blowup-lqx_D7xIZ2o-unsplash.jpg",
     link: "https://github.com/alerodriguessf/lighthouse_desafio03_alexandrersf-"
   },
-     {
+  {
     title: "evaluating political forecasting through a gamified prediction platform",
-    subtitle: "(Data Analysis, Political Forecasting, Experimental Design)",         
+    subtitle: "(Data Analysis, Political Forecasting, Experimental Design)",
     image: "/images/leon-pascal-jc-2Axv9DC4Twk-unsplash.jpg",
     link: "https://medium.com/@alexandrersf/confidence-chaos-and-the-politics-of-prediction-c281593dc6f3"
   },
-   {
+  {
     title: "handcoding this website using Astro",
     subtitle: "(Astro, CSS, JavaScript)",
     image: "/images/markus-spiske-PsRUMc7vilg-unsplash.jpg",
     link: "https://github.com/alerodriguessf/my_website"
-  }, 
-{
+  },
+  {
     title: "predicting churn in streaming services",
     subtitle: "(Logistic Regression, Python, Sklearn, GridSearchCV)",
     image: "/images/thibault-penin-AWOl7qqsffM-unsplash.jpg",
@@ -47,7 +47,7 @@ const projects = [
 
 <section id="portfolio" style="max-width: 880px; margin: 3rem auto 2rem auto; padding: 0 1rem;">
   <p style="
-    font-size: 1.65rem;
+    font-size: 1.5rem;
     font-weight: regular;
     color: #ffffff;
     margin: 0 0 1rem 0;
@@ -56,7 +56,6 @@ const projects = [
   ">
     a selection of projects and exercises:
   </p>
-
 
   <div style="
     display: grid;
@@ -70,41 +69,29 @@ const projects = [
           height: 160px;
           border-radius: 12px;
           overflow: hidden;
-          background: transparent;
+          background: linear-gradient(145deg, #181818, #111111);
           transition: transform 0.3s ease, box-shadow 0.3s ease;
-          box-shadow: 
-            0 8px 32px rgba(0, 0, 0, 0.4),
-            inset 0 1px 0 rgba(255, 255, 255, 0.1);
+          box-shadow: 0 4px 12px rgba(0,0,0,0.4);
         ">
-          <!-- Imagem de fundo -->
+          <!-- Imagem de fundo: brightness 70% → 65% (-5%) -->
           <img src={project.image} alt={project.title} style="
             position: absolute;
             width: 100%;
             height: 100%;
             object-fit: cover;
-            filter: grayscale(8%) brightness(92%);
-            opacity: 1;
+            filter: brightness(65%) blur(1.5px);
             z-index: 0;
+            transition: filter 0.3s ease;
           " />
 
-          <!-- Overlay com gradiente elegante -->
+          <!-- Overlay flat: rgba(77,77,77,0.35) → rgba(60,60,60,0.42) (~5% mais escuro) -->
           <div style="
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background:
-              linear-gradient(
-                to top,
-                rgba(229, 231, 235, 0.88) 0%,
-                rgba(229, 231, 235, 0.75) 30%,
-                rgba(229, 231, 235, 0.52) 60%,
-                rgba(229, 231, 235, 0.18) 100%
-              );
-            backdrop-filter: blur(2px);
-            -webkit-backdrop-filter: blur(2px);
-            border: 1px solid rgba(203, 213, 225, 0.4);
+            background: rgba(60, 60, 60, 0.42);
             z-index: 1;
           "></div>
 
@@ -113,25 +100,13 @@ const projects = [
             position: absolute;
             bottom: 0.75rem;
             left: 0.75rem;
-            right: 0.75rem;
-            color: #111827;
+            color: white;
             z-index: 2;
           ">
-            <h3 style="
-              margin: 0 0 0.25rem 0;
-              font-size: 1.05rem;
-              font-weight: 600;
-              letter-spacing: 0.01em;
-              color: #0f172a;
-            ">
+            <h3 style="margin: 0 0 0.2rem 0; font-size: 1.0rem; font-weight: bold;">
               {project.title}
             </h3>
-            <p style="
-              margin: 0;
-              font-size: 0.95rem;
-              color: #334155;
-              font-weight: 400;
-            ">
+            <p style="margin: 0; font-size: 0.8rem; color: #ccc;">
               {project.subtitle}
             </p>
           </div>
@@ -143,7 +118,14 @@ const projects = [
 
 <style>
   .project-card:hover {
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5) !important;
     transform: translateY(-4px);
+    box-shadow:
+      0 4px 12px rgba(92, 92, 92, 0.6),
+      0 0 0 1px rgba(255, 255, 255, 0.12),
+      0 4px 32px rgba(200, 210, 230, 0.18) !important;
+  }
+
+  .project-card:hover img {
+    filter: brightness(80%) blur(0.6px);
   }
 </style>
